@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+/Users/georgiostrialonis/AndroidStudioProjects/Pneumonia/app/src/main/ml/chestXray_model.tflite
