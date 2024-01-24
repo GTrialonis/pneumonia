@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- If the camera is essential for your app, set required to true -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!-- Permissions for camera and external storage -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CapturePneumonia"
+        tools:targetApi="31">
+
+        <!-- The MainActivity that starts when the app is launched -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- If Camera_CheckPneumonia can start via an intent from other apps, set exported to true -->
+        <activity
+            android:name=".Camera_CheckPneumonia"
+            android:exported="true"/>
+
+        <!-- If Gallery_ChestXray can start via an intent from other apps, set exported to true -->
+        <activity
+            android:name=".Gallery_ChestXray"
+            android:exported="true"/>
+    </application>
+</manifest>
